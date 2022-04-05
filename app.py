@@ -22,4 +22,4 @@ def send():
     return send_file(img,as_attachment=True,mimetype='image/jpg') 
 
 if __name__ == "__main__":
-    app.run(debug=True,port=5001)
+    app.run(debug=True)
