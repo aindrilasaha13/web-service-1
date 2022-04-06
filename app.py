@@ -3,7 +3,7 @@ import matplotlib.pyplot as plt
 
 app = Flask(__name__)
 
-@app.route("/",methods=["GET","POST"])
+@app.get("/")
 def send():
 
     N = int(request.args.get("N"))
@@ -23,4 +23,5 @@ def send():
     return send_file(img,as_attachment=True,mimetype='image/jpg') 
 
 if __name__ == "__main__":
-    app.run(debug=True,port=5001)
+    app.run(debug=True)
+    # app.run(debug=True,port=5001)
